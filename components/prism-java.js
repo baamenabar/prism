@@ -12,5 +12,5 @@ Prism.languages.java = {
 		lookbehind: true
 	},
 	'ignore': /&(lt|gt|amp);/gi,
-	'punctuation': /[{}[\];(),.:]/g,
+	'punctuation': /[{}[\];(),.:]/g
 };
