@@ -1,3 +1,4 @@
+Prism.languages.abbreviations.markup = /(html|xml)/;
 Prism.languages.markup = {
 	'comment': /&lt;!--[\w\W]*?--(&gt;|&gt;)/g,
 	'prolog': /&lt;\?.+?\?&gt;/,

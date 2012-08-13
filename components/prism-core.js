@@ -45,7 +45,9 @@ var _ = self.Prism = {
 					_.languages.DFS(o[i], callback);
 				}
 			}
-		}
+		},
+
+		abbreviations: {}
 	},
 
 	highlightAll: function(async, callback) {
@@ -58,7 +60,7 @@ var _ = self.Prism = {
 		
 	highlightElement: function(element, async, callback) {
 		// Find language
-		var language, grammar, parent = element;
+		var language, abbreviation, grammar, parent = element;
 		
 		while (parent && !lang.test(parent.className)) {
 			parent = parent.parentNode;
@@ -66,6 +68,18 @@ var _ = self.Prism = {
 		
 		if (parent) {
 			language = (parent.className.match(lang) || [,''])[1];
+			for (var index in _.languages.abbreviations) {
+				var abbr = _.languages.abbreviations[index];
+				if (!!(abbr.test) && abbr.test(language)) {
+					abbreviation = language.match(abbr)[1];
+				} else if (abbr === language) {
+					abbreviation = language;
+				}
+				if(abbreviation) {
+					language = index;
+					break;
+				}
+			}
 			grammar = _.languages[language];
 		}
 
@@ -80,7 +94,11 @@ var _ = self.Prism = {
 		parent = element.parentNode;
 		
 		if (/pre/i.test(parent.nodeName)) {
-			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language; 
+			parent.className = parent.className.replace(lang, '').replace(/\s+/g, ' ') + ' language-' + language;
+		}
+		
+		if (parent.dataset) {
+			parent.dataset['lang'] = abbreviation || language;
 		}
 
 		var code = element.textContent.trim();
