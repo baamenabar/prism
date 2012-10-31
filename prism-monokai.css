@@ -1,0 +1,111 @@
+/**
+* prism.js Monokai theme for CSS & Sass/Scss
+* https://github.com/MoOx/prism-sass-theme-monokai
+*
+* @todo test for JavaScript & HTML
+*
+* @author @MoOx 
+* 
+*/
+/* line 41, ../sass/monokai.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  line-height: 18px;
+  color: #76d9e6;
+  text-shadow: 0 1px 0 black;
+}
+
+/* line 67, ../sass/monokai.scss */
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #222222;
+}
+
+/* line 72, ../sass/monokai.scss */
+pre[class*="language-"] {
+  padding: 12px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #e1e1e8;
+}
+
+/* line 91, ../sass/monokai.scss */
+:not(pre) > code[class*="language-"] {
+  padding: 2px 3px 1px 3px;
+  border-radius: .3em;
+  border: 1px solid #7a6652;
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  white-space: nowrap;
+}
+
+/* line 99, ../sass/monokai.scss */
+.namespace {
+  opacity: .7;
+}
+
+/* line 107, ../sass/monokai.scss */
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: #6f705e;
+}
+/* line 114, ../sass/monokai.scss */
+.token.null, .token.operator, .token.boolean, .token.number {
+  color: #a77afe;
+}
+/* line 119, ../sass/monokai.scss */
+.token.attr-name, .token.string {
+  color: #e6d06c;
+}
+/* line 126, ../sass/monokai.scss */
+.token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: #e6d06c;
+}
+/* line 130, ../sass/monokai.scss */
+.token.selector {
+  color: #a6e22d;
+}
+/* line 140, ../sass/monokai.scss */
+.token.atrule, .token.attr-value, .token.keyword, .token.control, .token.directive, .token.important, .token.unit {
+  color: #f12770;
+}
+/* line 145, ../sass/monokai.scss */
+.token.regex, .token.statement {
+  color: #76d9e6;
+}
+/* line 150, ../sass/monokai.scss */
+.token.placeholder, .token.variable {
+  color: white;
+}
+/* line 155, ../sass/monokai.scss */
+.token.property, .token.tag {
+  font-style: italic;
+}
+/* line 160, ../sass/monokai.scss */
+.token.important, .token.statement {
+  font-weight: bold;
+}
+/* line 183, ../sass/monokai.scss */
+.token.punctuation {
+  color: #bebec5;
+}
+/* line 187, ../sass/monokai.scss */
+.token.entity {
+  cursor: help;
+}
+/* line 192, ../sass/monokai.scss */
+.token.debug {
+  color: red;
+}
